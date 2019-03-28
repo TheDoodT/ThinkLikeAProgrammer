@@ -1,2 +1,0 @@
-# ThinkLikeAProgrammer
-Exercises

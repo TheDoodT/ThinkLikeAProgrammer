@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+	for (int hashMark = 0; hashMark < 4; hashMark++) {
+
+		// outputs whitespaces to trail hashMarks
+		for (int space = 0; space <= (hashMark - 1); space++) {
+			cout << " ";
+		}
+
+		// goes from 8 to 6,4,2 hashmarks
+		for (int row = 0; row < (8-hashMark*2); row++) {
+			cout << "#";
+		}
+		cout << "\n";
+	}
+
+	cout << "\n";
+
+	// upper half
+	for (int row = 0; row < 4; row++) {
+		
+		for (int space = 0; space < 3- row; space++) {
+			cout << " ";
+		}
+
+		for (int hashMark = 0; hashMark < (row*2)+2; hashMark++) {
+
+			cout << "#";
+		}
+		cout << "\n";
+	}
+
+	// lower half
+	for (int row = 0; row < 4; row++) {
+
+		for (int space = 0; space < row; space++) {
+
+			cout << " ";
+		}
+
+		for (int hashMark = 0; hashMark < 8-(row * 2); hashMark++) {
+
+			cout << "#";
+		}
+		cout << "\n";
+	}
+
+	getchar();
+	return 0;
+}

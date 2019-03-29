@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+
+/*  Output:
+
+		#			       #
+		 ##		     ##
+		  ###	   ###
+		   ########
+		   ########
+		  ###    ###
+		 ##		     ##
+		#			       #
+	
+	*/
+int main() {
+	//  top half
+
+	for (int row = 1; row <= 4; row++) {
+
+		for (int space = 1; space < row; space++) {
+
+			cout << " ";
+		}
+
+		for (int hash = 1; hash <= row; hash++) {
+
+			cout << "#";
+		}
+
+		for (int space = 3; space <= 14 -((row-1)*4); space++) {
+
+			cout << " ";
+		}
+
+		for (int hash = 14-row; hash <= 13; hash++) {
+			
+			cout << "#";
+		}
+
+		cout << "\n";
+	}
+
+	// bottom half
+
+	for (int row = 1; row <= 4; row++) {
+
+		for (int space = 4; space > row; space--) {
+
+			cout << " ";
+		}
+
+		for (int hash = 4; hash >= row; hash--) {
+
+			cout << "#";
+		}
+
+		for (int space = 1; space <= 0+((row-1)*4); space++) {
+
+			cout << " ";
+		}
+
+		for (int hash = 4; hash >= row; hash--) {
+
+			cout << "#";
+		}
+
+
+
+		cout << "\n";
+
+	}
+
+	getchar();
+	return 0;
+}
